@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Path to the backup folder
+backup_folder="$HOME/configs_backup"
+
+# Create the backup folder if it doesn't exist
+mkdir -p "$backup_folder"
+
+# Copy the Polybar configuration file
+cp -r "$HOME/.config/polybar/" "$backup_folder"
+
+# Copy the Picom configuration file
+cp "$HOME/.config/picom.conf" "$backup_folder"
+
+# Copy the contents of the Kitty configuration folder
+cp -r "$HOME/.config/kitty/" "$backup_folder"
+
+echo "Backup completed in: $backup_folder"
+
